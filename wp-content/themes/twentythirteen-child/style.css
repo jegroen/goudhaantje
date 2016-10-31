@@ -1,0 +1,22 @@
+/*
+ Theme Name:   Goudhaantje - Twenty Thirteen Child
+ Theme URI:    http://example.com/twenty-fifteen-child/
+ Description:  Goudhaantje - Twenty Thirteen Child
+ Author:       J. Jansen
+ Author URI:   watermeloen.nl
+ Template:     twentythirteen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twenty-fifteen-child
+*/
+
+#page > header {
+    height: 600px;
+}
+#page > header h1 {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+}
+
