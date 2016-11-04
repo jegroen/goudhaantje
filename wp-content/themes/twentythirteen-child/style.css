@@ -17,21 +17,25 @@
 #page > header {
     height: 600px;
     padding-top: 20px;
+}
+
+#page > header .home-link {
     position: relative;
 }
 
 #haantje-icon {
-    width: 25vw;
-    height: 25vw;
+    width: 90px;
+    height: 90px;
     background: url(images/haantje.svg) no-repeat top left;
     background-size: contain;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    border: 5px solid #333;
 }
 
 #site-title-descr {
-    margin-left: 30vw;
+    margin-left: 110px;
 }
 
 #page > header h1 {
@@ -40,9 +44,9 @@
     font-weight: normal;
     text-transform: uppercase;
     color: #fff;
-    background-color: #000;
+    background-color: #333;
     padding: .2em;
-    margin-top: 5vw;
+    margin-top: .5em;
 }
 
 #page > header h2 {
@@ -51,4 +55,35 @@
     padding: .1em;
     font-style: normal;
 }
+
+nav {
+    display: none;
+}
+
+@media screen and (min-width: 359px) {
+    #haantje-icon {
+        width: 120px;
+        height: 120px;
+    }
+
+    #site-title-descr {
+        margin-left: 140px;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    #haantje-icon {
+        width: 150px;
+        height: 150px;
+    }
+
+    #site-title-descr {
+        margin-left: 180px;
+    }
+
+    #page > header h1 {
+        margin-top: .3em;
+    }
+}
+
 
