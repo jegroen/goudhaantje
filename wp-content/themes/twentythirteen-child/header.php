@@ -23,6 +23,7 @@
 	<meta name="viewport" content="width=device-width">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
@@ -33,8 +34,11 @@
 	<div id="page" class="hfeed site">
 		<header id="masthead" class="site-header" role="banner">
 			<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			    <div id="haantje-icon"></div>
+			    <div id="site-title-descr">
+                    <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+                    <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+                </div>
 			</a>
 
 			<div id="navbar" class="navbar">
