@@ -25,6 +25,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/bootstrap.min.css" rel="stylesheet">
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
