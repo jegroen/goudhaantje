@@ -1,0 +1,11 @@
+article {
+    .entry-header {
+        margin-bottom: 1em;
+    }
+}
+/* TODO Move media query numbers to variables. THIS IS MOB_LANDSCAPE*/
+@media screen and (min-width: 600px) {
+    article.hentry {
+        padding: 40px 30px;
+    }
+}

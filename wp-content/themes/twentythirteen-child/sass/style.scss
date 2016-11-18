@@ -1,5 +1,11 @@
 @import 'config/config';
 
 @import 'includes/child-template-comment';
+
+@import 'mixins/mixins';
+
 @import 'includes/general-elements';
 @import 'includes/header';
+@import 'includes/articles';
+@import 'includes/pages';
+@import 'includes/locations';
