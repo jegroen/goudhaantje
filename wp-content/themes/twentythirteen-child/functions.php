@@ -11,4 +11,10 @@ function my_theme_enqueue_styles() {
     );
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+
+function posts_order_wpse_91866() {
+    add_post_type_support( 'post', 'page-attributes' );
+}
+
+add_action( 'admin_init', 'posts_order_wpse_91866' );
 ?>
