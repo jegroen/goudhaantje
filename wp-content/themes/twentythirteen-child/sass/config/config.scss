@@ -1,9 +1,14 @@
 /* COLORS */
 
 $dark-grey: #333;
-
-
+$red:       #F43921;
 
 /* FONTS */
 $OpenSansC: 'Open Sans Condensed';
 $OpenSans: 'Open Sans';
+
+/* BREAKPOINTS */
+$tw13_mob_p_max: 359px;
+$tw13_mob_l_min: 360px;
+$tw13_mob_l_max: 767px;
+$tw13_tab_p_min: 768px;

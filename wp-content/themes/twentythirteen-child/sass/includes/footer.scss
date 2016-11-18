@@ -1,0 +1,20 @@
+.site-footer {
+    background-color: $red;
+
+    .widget a {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+
+    .sidebar-container {
+        background-color: $dark-grey;
+    }
+
+    h3.widget-title {
+        font-family: $OpenSansC;
+
+        text-transform: uppercase;
+        font-style: normal;
+    }
+}

@@ -39,7 +39,9 @@
 			    <div id="haantje-icon"></div>
 			    <div id="site-title-descr">
                     <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-                    <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+                    <h2 class="site-description">
+                        <span class="description"><?php bloginfo( 'description' ); ?></span>
+                    </h2>
                 </div>
 			</a>
 
