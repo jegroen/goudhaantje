@@ -64,8 +64,6 @@ h1 {
     border: 5px solid #333; }
   #page > header #site-title-descr {
     margin-left: 110px; }
-  #page > header nav {
-    display: none; }
 
 @media screen and (min-width: 360px) {
   #page > header {
@@ -133,3 +131,24 @@ article .entry-header {
 @media screen and (min-width: 1000px) {
   .location-post {
     width: 25%; } }
+
+.assortiment-post {
+  border-bottom: 1px solid #eee;
+  padding: 1em 0; }
+  .assortiment-post .entry-title {
+    font-family: "Open Sans"; }
+  .assortiment-post .assortiment-price-container {
+    text-align: right;
+    max-width: 450px; }
+  .assortiment-post .assortiment-price, .assortiment-post .assortiment-price-quantity {
+    display: inline-block;
+    font-size: 16px; }
+  .assortiment-post .assortiment-price {
+    font-family: "Open Sans";
+    font-size: 22px;
+    padding-left: .5em; }
+
+@media screen and (min-width: 766px) {
+  .assortiment-post .assortiment-price-container {
+    text-align: right;
+    max-width: 80%; } }
