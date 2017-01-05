@@ -5,6 +5,7 @@
     .home-link {
         position: relative;
         max-width: $max-content-width;
+        margin-top: 20px;
     }
 
     h1 {
@@ -23,7 +24,7 @@
     }
 
     h2 {
-        font-family: 'Open Sans Condensed', sans-serif;
+        font-family: $OpenSansC, sans-serif;
         text-transform: uppercase;
         padding: .1em;
         font-style: normal;
@@ -51,26 +52,31 @@
 
     .main-navigation {
         max-width: $max-content-width;
+        min-height: 20px;
     }
 
     #navbar {
         background: transparent;
-        position: absolute;
-        right: 20px;
-        top: 20px;
         text-align: right;
         z-index: 10;
 
-        .menu-item a {
-            text-transform: uppercase;
-            text-shadow: 1px 1px 1px #333;
-            font-weight: bold;
-            font-size: 18px;
-            color: #fff;
+        .menu-item {
+            border-radius: 8px;
 
-            &:hover {
-                background-color: transparent;
-                color: #ddd;
+            a {
+                text-transform: uppercase;
+                text-shadow: 1px 1px 1px #333;
+                font-weight: bold;
+                font-size: 18px;
+                color: #fff;
+                padding: 0 0 2px 0;
+                margin: 0 20px;
+
+                &:hover {
+                    background-color: transparent;
+                    color: #ddd;
+                }
+
             }
         }
 
@@ -114,6 +120,10 @@
         #site-title-descr {
             margin-left: 180px;
         }
+    }
+
+    #navbar {
+        position: static;
     }
 }
 
