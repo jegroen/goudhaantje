@@ -25,7 +25,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link href="<?php echo get_stylesheet_directory_uri(); ?>/bootstrap.min.css" rel="stylesheet">
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/css-inc/bootstrap.min.css" rel="stylesheet">
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
@@ -35,14 +35,6 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
 		<header id="masthead" class="site-header" role="banner">
-		    <div id="navbar" class="navbar">
-                <nav id="site-navigation" class="navigation main-navigation" role="navigation">
-                    <button class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></button>
-                    <a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentythirteen' ); ?>"><?php _e( 'Skip to content', 'twentythirteen' ); ?></a>
-                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
-                    <?php /* get_search_form(); */?>
-                </nav><!-- #site-navigation -->
-            </div><!-- #navbar -->
 
 			<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 			    <div id="haantje-icon"></div>
@@ -53,6 +45,19 @@
                     </h2>
                 </div>
 			</a>
+
+            <div id="navbar" class="navbar">
+                <nav id="site-navigation" class="navigation main-navigation" role="navigation">
+                    <button class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></button>
+                    <a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentythirteen' ); ?>"><?php _e( 'Skip to content', 'twentythirteen' ); ?></a>
+                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
+                    <?php /* get_search_form(); */?>
+                </nav><!-- #site-navigation -->
+            </div><!-- #navbar -->
+
+			<div id="reservation-text">
+                Reserveren? Bel <a href="tel:0618077361">06 - 1807 7361</a>
+			</div>
 		</header><!-- #masthead -->
 
 		<div id="main" class="site-main">
