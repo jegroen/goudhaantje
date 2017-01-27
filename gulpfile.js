@@ -12,7 +12,9 @@ gulp.task('styles', function() {
         .pipe(gulp.dest(cssDir));
 });
 
-//Watch task
-gulp.task('default',function() {
+
+gulp.task('watchStyles', function() {
     gulp.watch(sassDir + '/**/*.scss', ['styles']);
 });
+
+gulp.task('default', ['watchStyles']);
