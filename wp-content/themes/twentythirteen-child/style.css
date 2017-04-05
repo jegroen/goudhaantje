@@ -26,11 +26,50 @@ h1 {
   font-family: "Open Sans";
   font-weight: 900;
   text-transform: uppercase;
-  font-size: 32px; }
+  font-size: 26px; }
+
+a,
+a:active,
+a:hover,
+a:visited {
+  text-decoration: none; }
+
+.site {
+  max-width: 1600px;
+  margin: 0 auto; }
+
+/* Assistive text */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  position: absolute !important;
+  height: 1px;
+  width: 1px; }
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  text-decoration: none;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar */ }
 
 #page > header {
   height: 255px;
-  background-size: auto 255px; }
+  background-size: auto 255px;
+  position: relative; }
   #page > header .home-link {
     position: absolute;
     top: 10px;
@@ -46,35 +85,32 @@ h1 {
     border: 3px solid #333;
     z-index: 10; }
   #page > header #site-title-descr {
-    margin-left: 55px; }
+    margin-left: 63px; }
     #page > header #site-title-descr h1 {
       display: inline-block;
+      margin-top: .3em;
       font-family: 'Anton', sans-serif;
       font-size: 20px;
       font-weight: normal;
       text-transform: uppercase;
-      color: #333;
-      padding: .5em; }
+      color: #333; }
       #page > header #site-title-descr h1.site-title:hover {
         text-decoration: none; }
     #page > header #site-title-descr h2 {
-      font-family: "Open Sans Condensed", sans-serif;
-      text-transform: uppercase;
-      padding: .1em;
-      font-style: normal;
       display: none; }
-      #page > header #site-title-descr h2 .description {
-        background-color: rgba(230, 230, 230, 0.6);
-        padding: 0 0.1em; }
   #page > header .main-navigation {
-    max-width: 1240px;
     min-height: 20px; }
   #page > header #navbar {
     height: 50px;
+    padding: 0 20px;
     background-color: #fff;
     text-align: right;
     z-index: 10; }
     #page > header #navbar .menu-toggle {
+      display: inline-block;
+      font-size: 0;
+      background: none;
+      border: 0;
       margin-top: 8px;
       color: transparent;
       padding: 10px 15px;
@@ -85,30 +121,45 @@ h1 {
         content: "\e236";
         font-size: 16px;
         vertical-align: text-bottom; }
-    #page > header #navbar .nav-menu {
+    #page > header #navbar #site-navigation #primary-menu {
+      background-color: #fff;
+      display: none;
+      /* initially hidden on mobile */
+      margin-top: 0;
+      position: absolute;
+      right: 0;
       font-family: "Open Sans Condensed", sans-serif; }
-      #page > header #navbar .nav-menu li {
+      #page > header #navbar #site-navigation #primary-menu li {
         padding: 10px 0; }
-    #page > header #navbar .menu-menu-1-container {
+    #page > header #navbar #site-navigation.toggled-on #primary-menu {
+      display: block; }
+      #page > header #navbar #site-navigation.toggled-on #primary-menu li {
+        display: block; }
+    #page > header #navbar #site-navigation .menu-menu-1-container {
       background-color: #fff;
       max-width: 400px;
       margin-left: auto; }
-    #page > header #navbar .menu-item {
+    #page > header #navbar #site-navigation .menu-item,
+    #page > header #navbar #site-navigation .page_item {
+      background-color: transparent;
       border-bottom: 1px solid #eee; }
-      #page > header #navbar .menu-item a {
+      #page > header #navbar #site-navigation .menu-item a,
+      #page > header #navbar #site-navigation .page_item a {
+        background-color: transparent;
         font-weight: bold;
         font-size: 18px;
         color: #333;
         padding: 0 0 2px 0;
         margin: 0 20px; }
-        #page > header #navbar .menu-item a:hover {
-          background-color: transparent;
-          color: #ddd; }
-    #page > header #navbar .current_page_item a,
-    #page > header #navbar .current_page_item a:hover {
+        #page > header #navbar #site-navigation .menu-item a:hover,
+        #page > header #navbar #site-navigation .page_item a:hover {
+          color: #ddd;
+          background-color: transparent; }
+    #page > header #navbar #site-navigation .current_page_item a,
+    #page > header #navbar #site-navigation .current_page_item a:hover {
       font-style: normal; }
   #page > header #reservation-text {
-    background-color: #D33B37;
+    background-color: #333;
     color: #fff;
     text-align: center;
     position: absolute;
@@ -119,7 +170,7 @@ h1 {
     #page > header #reservation-text a {
       color: #fff; }
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 381px) {
   #page > header {
     height: 180px;
     background-size: auto 180px; } }
@@ -129,27 +180,97 @@ h1 {
     height: 365px;
     background-size: auto 365px; }
     #page > header #navbar {
-      padding: 50px 10px;
+      padding: 0;
       height: 120px; }
-    #page > header h1 {
-      margin-top: .3em; }
+      #page > header #navbar .menu-toggle {
+        height: 112px;
+        padding-top: 0;
+        margin-right: 15px; }
+        #page > header #navbar .menu-toggle:after {
+          font-size: 26px; }
     #page > header #haantje-icon {
-      width: 150px;
-      height: 150px; }
+      margin-top: 15px;
+      width: 130px;
+      height: 130px; }
     #page > header #site-title-descr {
-      margin-left: 180px; } }
+      margin-left: 150px; }
+      #page > header #site-title-descr h1 {
+        margin: .9em 0 0 0;
+        font-size: 36px;
+        line-height: 1.2em;
+        padding: 0; }
+      #page > header #site-title-descr h2 {
+        display: block;
+        margin: 0 0 .2em 0;
+        font-family: "Open Sans Condensed", sans-serif;
+        line-height: 1.2em;
+        color: #D33B37;
+        text-transform: uppercase;
+        font-style: normal; } }
+
+@media screen and (min-width: 1024px) {
+  #page > header {
+    height: 550px;
+    background-size: auto 550px; }
+    #page > header #navbar {
+      padding: 50px 10px; }
+      #page > header #navbar .menu-toggle {
+        display: none; }
+      #page > header #navbar .menu-menu-1-container {
+        background-color: transparent;
+        max-width: none; }
+      #page > header #navbar #site-navigation #primary-menu {
+        display: block; }
+        #page > header #navbar #site-navigation #primary-menu li {
+          display: inline; }
+      #page > header #navbar #site-navigation .menu-item,
+      #page > header #navbar #site-navigation .page_item {
+        border-bottom: 0;
+        font-family: "Open Sans";
+        text-transform: uppercase; }
+        #page > header #navbar #site-navigation .menu-item a,
+        #page > header #navbar #site-navigation .page_item a {
+          color: #D33B37;
+          background-color: #fff;
+          font-weight: bold;
+          font-size: 18px;
+          padding: 0 0 7px 0;
+          margin: 0 0 0 40px; }
+          #page > header #navbar #site-navigation .menu-item a:hover,
+          #page > header #navbar #site-navigation .page_item a:hover {
+            color: #ddd; } }
 
 .site-footer {
-  background-color: #D33B37; }
+  margin-top: 20px;
+  background-color: #666; }
   .site-footer .widget-area {
     max-width: 1200px; }
-    .site-footer .widget-area .widget a {
-      color: #fff;
-      text-transform: uppercase;
-      font-size: 18px; }
-    .site-footer .widget-area .sidebar-container {
-      background-color: #333; }
+    .site-footer .widget-area #follow-links {
+      padding: 0;
+      margin-top: 0; }
+      .site-footer .widget-area #follow-links li {
+        display: inline-block;
+        margin-right: 10px; }
+      .site-footer .widget-area #follow-links a {
+        color: transparent;
+        text-transform: uppercase;
+        font-size: 0; }
+        .site-footer .widget-area #follow-links a:before {
+          font-family: Genericons;
+          color: #fff;
+          font-size: 32px; }
+        .site-footer .widget-area #follow-links a:hover {
+          cursor: pointer;
+          text-decoration: none; }
+          .site-footer .widget-area #follow-links a:hover:before {
+            color: #e6e6e6; }
+      .site-footer .widget-area #follow-links .follow-facebook a:before {
+        content: "\f203"; }
+      .site-footer .widget-area #follow-links .contact-email a:before {
+        content: "\f410"; }
     .site-footer .widget-area h3.widget-title {
+      color: #fff;
+      margin-bottom: .2em;
       font-family: "Open Sans Condensed";
       text-transform: uppercase;
       font-style: normal; }
@@ -157,21 +278,35 @@ h1 {
 article .entry-header {
   margin-bottom: 1em; }
 
-/* TODO Move media query numbers to variables. THIS IS MOB_LANDSCAPE*/
-@media screen and (min-width: 600px) {
-  article.hentry {
-    padding: 40px 30px; } }
+#page > header .home-link {
+  margin-left: 20px; }
 
 .entry-header, .entry-content, .entry-summary, .entry-meta {
   max-width: 1240px;
   padding: 0 20px; }
 
+.site-footer {
+  padding: 20px; }
+
+@media screen and (min-width: 768px) {
+  #page > header .nav-menu {
+    margin-right: 40px; }
+  #page > header .home-link {
+    margin-left: 40px; }
+  article.hentry {
+    padding: 40px 30px; }
+  .site-footer {
+    padding: 40px 30px; }
+    .site-footer .sidebar-container {
+      padding: 0 20px; } }
+
 .location-post {
-  padding-right: 50px; }
+  padding-right: 50px;
+  margin-bottom: 40px; }
   .location-post h3 {
     font-family: "Open Sans";
     text-transform: uppercase;
-    margin-top: 1.5em; }
+    margin: .5em 0 0 0; }
   .location-post .location-title {
     font-size: 28px; }
   .location-post .location-description {
@@ -179,6 +314,10 @@ article .entry-header {
 
 /* TODO Move media query numbers to variables. THIS IS MOB_LANDSCAPE*/
 @media screen and (min-width: 600px) {
+  .entry-content:after {
+    content: "";
+    display: table;
+    clear: both; }
   .location-post {
     float: left;
     width: 50%; } }

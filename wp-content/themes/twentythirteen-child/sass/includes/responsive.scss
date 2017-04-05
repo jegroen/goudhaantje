@@ -1,0 +1,38 @@
+#page > header .home-link {
+    margin-left: 20px;
+}
+
+.entry-header, .entry-content, .entry-summary, .entry-meta {
+    max-width: $max-content-width;
+    padding: 0 20px;
+}
+
+.site-footer {
+    padding: 20px;
+}
+
+@media screen and (min-width: $tw13_tab_p_min) {
+
+    #page > header {
+        .nav-menu {
+            margin-right: 40px;
+        }
+
+        .home-link {
+            margin-left: 40px;
+        }
+    }
+
+    article.hentry {
+        padding: 40px 30px;
+    }
+
+    .site-footer {
+        padding: 40px 30px;
+
+        .sidebar-container {
+            padding: 0 20px;
+        }
+    }
+
+}
