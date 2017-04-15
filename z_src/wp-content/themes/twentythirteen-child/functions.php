@@ -17,4 +17,18 @@ function posts_order_wpse_91866() {
 }
 
 add_action( 'admin_init', 'posts_order_wpse_91866' );
+
+
+add_filter( 'body_class', 'extra_body_class' );
+// Add specific CSS class by filter
+function extra_body_class( $classes ) {
+    global $post;
+    if (is_page())
+        $classes[] = $post->post_name;
+    return $classes;
+
+}
+
+
+
 ?>

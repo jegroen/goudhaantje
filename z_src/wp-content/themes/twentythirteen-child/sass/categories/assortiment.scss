@@ -1,5 +1,18 @@
-.assortiment-post {
+body.assortiment .site-content {
+    background: url(images/schoolbord.jpg) center top;
 
+    article {
+        background-color: rgba(155, 155, 155, 0.2);
+
+        header>h1 {
+            color: #e5e5e5;
+        }
+    }
+
+}
+
+.assortiment-post {
+    color: #e5e5e5;
     border-bottom: 1px solid $light-grey;
     padding: 1em 0;
 

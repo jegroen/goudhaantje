@@ -91,6 +91,7 @@
 
             &.toggled-on #primary-menu {
                 display: block;
+                z-index: 10;
 
                 & li {
                     display: block;
@@ -245,7 +246,7 @@
                         color: $red;
                         background-color: #fff;
                         font-weight: bold;
-                        font-size: 18px;
+                        font-size: 16px;
                         padding: 0 0 7px 0;
                         margin: 0 0 0 40px;
 

@@ -14,8 +14,10 @@
 @media screen and (min-width: $tw13_tab_p_min) {
 
     #page > header {
-        .nav-menu {
-            margin-right: 40px;
+        #site-navigation:not(.toggled-on) {
+            .nav-menu {
+                margin-right: 40px;
+            }
         }
 
         .home-link {

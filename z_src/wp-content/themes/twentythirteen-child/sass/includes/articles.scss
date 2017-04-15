@@ -1,5 +1,11 @@
 article {
+    padding: 1em 0 2em 0;
+
     .entry-header {
         margin-bottom: 1em;
+    }
+
+    .entry-content, .entry-header {
+      margin: 0 auto;
     }
 }
