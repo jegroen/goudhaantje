@@ -1,2 +1,9 @@
 node_modules
 workspace.xml
+.idea
+wp-admin
+wp-content
+wp-includes
+goudhaantje.iml
+readme.html
+*.php
