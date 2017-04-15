@@ -26,9 +26,9 @@ gulp.task('buildStyle', function() {
         .pipe(gulp.dest(cssDir));
 });
 
-
-gulp.task('watchStyles', function() {
+gulp.task('watch', function() {
     gulp.watch(sassDir + '/**/*.scss', ['buildStyle']);
+    gulp.watch(themeSourceDir + '/**/*.php', ['copyThemeFiles']);
 });
 
 gulp.task('default', ['clean', 'copyThemeFiles', 'buildStyle']);
