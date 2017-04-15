@@ -1,0 +1,40 @@
+.location-post {
+    padding-right: 50px;
+    margin-bottom: 40px;
+
+    h3 {
+        font-family: $OpenSans;
+        text-transform: uppercase;
+        margin: .5em 0 0 0;
+    }
+
+    .location-title {
+        font-size: 28px;
+    }
+
+    .location-description {
+        font-size: 22px;
+    }
+}
+
+/* TODO Move media query numbers to variables. THIS IS MOB_LANDSCAPE*/
+@media screen and (min-width: 600px) {
+    .entry-content {
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+
+    .location-post {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .location-post {
+        width: 25%;
+    }
+}

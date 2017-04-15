@@ -1,0 +1,12 @@
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin headerHeight($height) {
+    height: $height;
+    background-size: auto $height;
+}
